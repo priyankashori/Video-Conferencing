@@ -13,7 +13,7 @@ let timeOnline = {}
 export const connectToSocket = (server) => {
     const io = new Server(server, {
         cors: {
-            origin: "*",
+            origin: "https://video-conferencing-frontend-6k2x.onrender.com",
             methods: ["GET", "POST"],
             allowedHeaders: ["*"],
             credentials: true
