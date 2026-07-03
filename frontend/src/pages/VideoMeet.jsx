@@ -464,13 +464,22 @@ export default function VideoMeetComponent() {
     setScreen(!screen);
   };
 
-  let handleEndCall = () => {
-    try {
-      let tracks = localVideoref.current.srcObject.getTracks();
-      tracks.forEach((track) => track.stop());
-    } catch (e) {}
-    window.location.href = "/home";
-  };
+
+
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate();
+
+let handleEndCall = () => {
+  try {
+    const tracks = localVideoref.current?.srcObject?.getTracks();
+    tracks?.forEach((track) => track.stop());
+  } catch (e) {
+    console.error(e);
+  }
+
+  navigate("/home");
+};
 
   let openChat = () => {
     setModal(true);
