@@ -49,9 +49,7 @@ export default function LandingPage() {
             <Link to={"/auth"}>Get Started</Link>
           </div>
         </div>
-        <div>
-          <img src="/pexels-ivan-s-4240609.jpg" alt="mobile" />
-        </div>
+       
       </div>
     </div>
   );
